@@ -1,17 +1,19 @@
 export const PaperStyle = {
-  background: "#000",
+  background: "#13233A",
   width: "100%",
   height: "70px",
   borderRadius: "0px",
-  color: "#fff",
+  color: "#C9D1D9",
   display: "flex",
   alignItems: "center",
 };
 
 export const linkBtnActive = {
-  color: "#fff",
+  color: "#C9D1D9",
   textTransform: "none",
   fontSize: "17px",
   textDecoration: "underline",
-  textDecorationColor: "#059862",
+  textDecorationColor: "#F78166",
+  textUnderlineOffset: "30px",
+  textUnderlineTickness: "3px",
 };

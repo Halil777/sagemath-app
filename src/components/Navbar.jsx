@@ -31,7 +31,16 @@ const Navbar = () => {
               <Stack direction="row" spacing={1}>
                 {linkData.map((item, i) => {
                   return (
-                    <Link to={item.link} key={`link_key${i}`}>
+                    <Link
+                      to={item.link}
+                      style={{
+                        textDecoration:
+                          item.link === location.pathname
+                            ? "underline"
+                            : "none",
+                      }}
+                      key={`link_key${i}`}
+                    >
                       <Button
                         sx={
                           item.link === location.pathname ? linkBtnActive : ""
