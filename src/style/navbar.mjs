@@ -9,11 +9,17 @@ export const PaperStyle = {
 };
 
 export const linkBtnActive = {
-  color: "#C9D1D9",
+  color: "#F78166",
   textTransform: "none",
   fontSize: "17px",
   textDecoration: "underline",
   textDecorationColor: "#F78166",
-  textUnderlineOffset: "30px",
-  textUnderlineTickness: "3px",
+  textUnderlineOffset: "29px",
+  textDecorationThickness: "3px",
+  transition: ".7s",
+};
+
+export const passiveLink = {
+  textDecoration: "none",
+  color: "#C9D1D9",
 };

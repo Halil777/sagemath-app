@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { linkData } from "../data/linkData.mjs";
-import { linkBtnActive, PaperStyle } from "../style/navbar.mjs";
+import { linkBtnActive, PaperStyle, passiveLink } from "../style/navbar.mjs";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
 import { Link, useLocation } from "react-router-dom";
 
@@ -28,26 +28,19 @@ const Navbar = () => {
               <Stack>
                 <Typography>Logo</Typography>
               </Stack>
-              <Stack direction="row" spacing={1}>
+              <Stack direction="row" spacing={3}>
                 {linkData.map((item, i) => {
                   return (
                     <Link
                       to={item.link}
                       style={{
-                        textDecoration:
-                          item.link === location.pathname
-                            ? "underline"
-                            : "none",
+                        ...(item.link === location.pathname
+                          ? linkBtnActive
+                          : passiveLink),
                       }}
                       key={`link_key${i}`}
                     >
-                      <Button
-                        sx={
-                          item.link === location.pathname ? linkBtnActive : ""
-                        }
-                      >
-                        {item.title}
-                      </Button>
+                      <Typography>{item.title}</Typography>
                     </Link>
                   );
                 })}
