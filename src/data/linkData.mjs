@@ -13,6 +13,6 @@ export const linkData = [
   },
   {
     link: "/help",
-    title: "Help",
+    title: "Books",
   },
 ];
