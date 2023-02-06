@@ -2,7 +2,6 @@ export const footerStyle = {
   background: "#13233A",
   width: "100%",
   minHeight: "40vh",
-  marginTop: "10vh",
 };
 
 export const linkBtnActiveFooter = {

@@ -27,9 +27,11 @@ import EmailIcon from "@mui/icons-material/Email";
 import { Link, useLocation } from "react-router-dom";
 import LocalPrintshopIcon from "@mui/icons-material/LocalPrintshop";
 import PhoneIcon from "@mui/icons-material/Phone";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const location = useLocation();
+  const { t } = useTranslation();
   return (
     <>
       <Box sx={footerStyle}>
@@ -40,9 +42,7 @@ const Footer = () => {
             alignItems="center"
             pt={3}
           >
-            <Typography color={"#fff"}>
-              Get connected with us on social networks:
-            </Typography>
+            <Typography color={"#fff"}>{t("getConnect")} :</Typography>
             <Stack direction={"row"} spacing={2}>
               <Tooltip title="FaceBook">
                 <IconButton sx={{ color: "#fff" }}>
@@ -85,7 +85,7 @@ const Footer = () => {
               return (
                 <Grid key={`footer_title_key${i}`} item sm={3}>
                   <Typography variant="h5" color="#F78166">
-                    {item.title}
+                    {t(item.title)}
                   </Typography>
                 </Grid>
               );
@@ -93,11 +93,28 @@ const Footer = () => {
           </Grid>
           <Grid container pb={3}>
             <Grid item sm={3}>
-              <Typography width="85%" sx={{ lineHeight: 2, color: "#fff" }}>
-                Oguz Han Engineering And Technology University .
-                <br />
-                Department of Information Systems And Technologies
-              </Typography>
+              <Stack>
+                <Typography
+                  width="85%"
+                  sx={{
+                    lineHeight: 2,
+                    color: "#fff",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  {t("titu")}
+                </Typography>
+                <Typography
+                  width="85%"
+                  sx={{
+                    lineHeight: 2,
+                    textTransform: "uppercase",
+                    color: "#fff",
+                  }}
+                >
+                  {t("department")}
+                </Typography>
+              </Stack>
             </Grid>
             <Grid item sm={3}>
               <Stack spacing={1}>
@@ -120,7 +137,7 @@ const Footer = () => {
                       }}
                       key={`link_key${i}`}
                     >
-                      <Typography>{item.title}</Typography>
+                      <Typography>{t(item.title)}</Typography>
                     </Link>
                   );
                 })}

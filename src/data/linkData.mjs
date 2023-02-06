@@ -1,18 +1,18 @@
 export const linkData = [
   {
     link: "/home",
-    title: "Home",
+    title: "home",
   },
   {
     link: "/about",
-    title: "About",
+    title: "about",
   },
   {
     link: "/contact",
-    title: "Contact",
+    title: "contact",
   },
   {
     link: "/help",
-    title: "Books",
+    title: "books",
   },
 ];

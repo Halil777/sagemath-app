@@ -1,21 +1,25 @@
 import React from "react";
 import { Grid, Stack, Typography } from "@mui/material";
-import ReactLoading from "react-loading";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <>
-      {/* <Stack
-        direction="row"
-        alignItems={"center"}
-        height="80vh"
-        justifyContent={"center"}
-      >
-        <ReactLoading type={"balls"} color={"red"} height={67} width={75} />
-      </Stack> */}
-      <Stack direction={"row"} justifyContent="center">
-        <Typography variant="h1">What is SageMath ?</Typography>
+      <Stack direction={"row"} pt={3} pb={3} justifyContent="center">
+        <Typography variant="h3">{t("what")} ?</Typography>
       </Stack>
+      <Grid container>
+        <Grid item sm={6}>
+          <Grid item sm={6}></Grid>
+          <Typography>{t("sage")}</Typography>
+        </Grid>
+        <Grid item sm={6}></Grid>
+        <Grid item sm={6}></Grid>
+        <Grid item sm={6} pt={2} pb={3}>
+          <Typography>{t("sage1")}</Typography>
+        </Grid>
+      </Grid>
     </>
   );
 };

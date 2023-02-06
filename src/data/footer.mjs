@@ -9,10 +9,10 @@ export const footer = [
   },
   {
     id: 2,
-    title: "Useful Links",
+    title: "links",
   },
   {
     id: 3,
-    title: "Contact",
+    title: "contact",
   },
 ];
